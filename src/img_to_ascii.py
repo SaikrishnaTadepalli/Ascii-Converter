@@ -5,11 +5,12 @@ from PIL import Image, ImageDraw, ImageFont
 
 ASCII_CHARS = [' ', '.', ':', '-', '=', '+', '*', '#', '%', '@', 'M', 'W', '&', '$', 'X', 'A', 'O', 'K', 'B', '8']
 
-FONT_WIDTH = 1
-FONT_HEIGHT = 2
+# Width and Height of Font in Pixels
+FONT_WIDTH = 8
+FONT_HEIGHT = 12
 
 FONT_RATIO = FONT_WIDTH / FONT_HEIGHT
-SCALE_FACTOR = 2
+SCALE_FACTOR = 0.4
 
 def GetOutputTextName(image_path):
     input_file_name = os.path.basename(image_path)
