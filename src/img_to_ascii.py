@@ -36,11 +36,11 @@ def GetCharacter(grey_val):
     char_index = math.floor(grey_val * len(ASCII_CHARS) / 256)
     return ASCII_CHARS[char_index]
 
-def ImageToAscii(original_image, image_path='input.jpg'):
+def ImageToAscii(original_image, image_path='input.jpg', output_folder='./'):
     resized_image = ResizeImage(original_image, SCALE_FACTOR)
     resized_width, resized_height = resized_image.size
 
-    output_text = open(GetOutputTextName(image_path), 'w')
+    output_text = open(output_folder + '/' + GetOutputTextName(image_path), 'w')
     output_image = Image.new(
         'RGB',
         (FONT_WIDTH * resized_width, FONT_HEIGHT * resized_height),
@@ -65,7 +65,7 @@ def ImageToAscii(original_image, image_path='input.jpg'):
             )
         output_text.write('\n')
     
-    output_image.save(GetOutputImageName(image_path))
+    output_image.save(output_folder + '/' + GetOutputImageName(image_path))
 
 def ConvertToAscii(image_path):
     original_image = Image.open(image_path)
