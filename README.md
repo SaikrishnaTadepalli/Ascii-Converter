@@ -2,7 +2,8 @@
 
 Given an Image or a Video, this program converts it to ASCII.
 
-In the case of an Image file, this program converts it to an ASCII image and text file
+In the case of an Image file, this program converts it to an ASCII image and text file.
+
 In the case of a Video file, this program converts the video to ASCII
 
 Getting Started:
